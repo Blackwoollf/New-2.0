@@ -1,4 +1,6 @@
 <?php
-echo "Email = rl.cl@yandex.ru";
-echo "Masha = 123";
 
+    function calculationSum( $a, $b ) {
+        return $a + $b;
+    }
+echo calculationSum(7, 3);
