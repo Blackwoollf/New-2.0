@@ -1,4 +1,7 @@
 <?php
-echo "Email = rl.cl@yandex.ru"; echo "hand = 1";
-echo "Name = Denis";
-echo "lags = 2";
+
+    function calculationSum( $a, $b ) {
+        return $a + $b;
+    }
+echo calculationSum(5, 2);
+
