@@ -1,7 +1,18 @@
 <?php
-$textStorage = [
-    1 => 'title',
-    2 => 'text',
-    ];
 
-echo $textStorage[1];
+
+$textStorage = [
+    0 => [
+        'title' => 'asd',
+    ],
+    1 => [
+        'text' => 'dsa',
+    ],
+];
+//echo $textStorage[1]['text'];
+
+function add($title, $text) {
+    echo $title, $text;
+}
+
+add('asdasd', 'asdsadsad');
