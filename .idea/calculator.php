@@ -19,7 +19,9 @@ $supportedOperators = ['+', '-', '*'];
     return false;
 }
 
- do {
+stream_set_blocking(STDIN, false);
+
+do {
     $userInput = readline("Введите выражение ");//7+2
      foreach ($supportedOperators as $operator) {
         $parseResult = parseOperator($userInput, $operator);
@@ -27,4 +29,5 @@ $supportedOperators = ['+', '-', '*'];
              echo calculateOperation(intval($parseResult['operators'][0]), intval($parseResult['operators'][1]), $parseResult['operator']);
          }
      }
- } while (true);
+    $key = ord(fgetc(STDIN));
+ } while ($key != 10);
