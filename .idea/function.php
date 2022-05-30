@@ -1,18 +1,22 @@
 <?php
 
-
 $textStorage = [
     0 => [
-        'title' => 'asd',
+        'title' => 'Титул',
     ],
     1 => [
-        'text' => 'dsa',
+        'text' => 'Текст',
     ],
 ];
-//echo $textStorage[1]['text'];
+//$arr = ['vfk' => 'cxv'];
+//array_push($textStorage, $arr,);
+//print_r($textStorage);
 
-function add($title, $text) {
+function add($arr, $title, $text) {
     echo $title, $text;
 }
 
-add('asdasd', 'asdsadsad');
+add($textStorage, $textStorage[0]['title'], $textStorage[1]['text']);
+add($textStorage, $textStorage[0]['title'], $textStorage[1]['text']);
+
+
