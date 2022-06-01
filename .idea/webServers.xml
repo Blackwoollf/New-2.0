@@ -1,0 +1,16 @@
+<?xml vКонтролер
+
+Петрищев Сергей Петровичersion="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ab6b5775-f5e0-44f1-9499-c61daf98548d" name="123" url="http://localhost/">
+        <fileTransfer host="http://localhost" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
