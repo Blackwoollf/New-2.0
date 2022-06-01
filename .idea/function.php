@@ -18,7 +18,7 @@ function add(&$arr, $title, $text) {
 add($textStorage, "Букварь", "Заголовок");
 add($textStorage, "Пропись", "Тема");
 
-
+//Удаление элемента
 function remove(&$arr, $number) {
     if (isset($arr[$number])) {
         unset($arr[$number]);
@@ -27,20 +27,20 @@ function remove(&$arr, $number) {
         return 'false';
     }
 }
-//print_r(remove($textStorage, '0') . PHP_EOL);
-//print_r(remove($textStorage, '5') . PHP_EOL);
+print_r(remove($textStorage, '0') . PHP_EOL);
+print_r(remove($textStorage, '5') . PHP_EOL);
 
-function edit(&$arr1, $title, $text, &$arr, $number) {
-    if (isset($arr[$number])) {
-        $arr1 = [
+//Изменен элемента
+function edit(&$arrs, $title, $text, &$arr) {
+    if (isset($arr)) {
+        $arrs = [
             'title' => $title,
             'text' => $text,
         ];
-        return array_replace($arr, $arr1);
-        return true;
+        return array_replace($arr, $arrs);
     }
 }
-edit($textStorage[1], 'dsa', 'asd',$textStorage, '1');
+edit($textStorage[1], 'dsa', 'asd',$textStorage);
 
 print_r($textStorage);
 
