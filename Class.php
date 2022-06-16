@@ -1,25 +1,38 @@
 <?php
-    $employee_1 = ['age' => 30, 'gender' => 'male', 'name' => 'Nick', 'surname' => 'Ivanov', 'position' => 'SEO'];
-    $employee_2 = ['age' => 33, 'gender' => 'female', 'name' => 'Ann', 'surname' => 'Petrova', 'position' => 'STO'];
 
-    function displayName($employee){
-        echo $employee['name']. PHP_EOL;
+    class Employee {
+
+        public $age, $gender, $name, $surname, $position;
+        public function displayName(){
+            echo $this->name . PHP_EOL;
+        }
+
+        public function displayAge(){
+            echo $this->age. PHP_EOL;
+        }
+
+        public function changePosition($newPosition){
+            $this->position = $newPosition;
+        }
     }
 
-    function displayAge($employee){
-        echo $employee['age']. PHP_EOL;
-    }
+    $employee_1 = new Employee();
+    $employee_2 = new Employee();
 
-    function changePosition(&$employee, $newPosition){
-        $employee['position'] = $newPosition;
-    }
+    $employee_1->age = 30;
+    $employee_1->gender = 'male';
+    $employee_1->name = 'Nick';
+    $employee_1->surname = 'Ivanov';
+    $employee_1->position = 'SEO';
 
-    displayName($employee_1);
-    displayName($employee_2);
+    $employee_2->age = 33;
+    $employee_2->gender = 'female';
+    $employee_2->name = 'Ann';
+    $employee_2->surname = 'Petrova';
+    $employee_2->position = 'STO';
 
-    displayAge($employee_1);
-    displayAge($employee_2);
+    $employee_1->displayName();
+    $employee_2->displayName();
+    $employee_2->changePosition('SEO');
 
-    changePosition($employee_1, 'HR');
-
-    print_r($employee_1);
+    print_r($employee_2);
